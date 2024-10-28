@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'AirbnbCereal_W_Lt';
+    src: url('../fonts/AirbnbCerealWLt.woff2') format('woff2'),
+        url('../fonts/AirbnbCerealWLt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AirbnbCereal_W_Bk';
+    src: url('../fonts/AirbnbCerealWBk.woff2') format('woff2'),
+        url('../fonts/AirbnbCerealWBk.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AirbnbCereal_W_Blk';
+    src: url('../fonts/AirbnbCerealWBlk.woff2') format('woff2'),
+        url('../fonts/AirbnbCerealWBlk.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AirbnbCereal_W_Md';
+    src: url('../fonts/AirbnbCerealWMd.woff2') format('woff2'),
+        url('../fonts/AirbnbCerealWMd.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AirbnbCereal_W_Bd';
+    src: url('../fonts/AirbnbCerealWBd.woff2') format('woff2'),
+        url('../fonts/AirbnbCerealWBd.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AirbnbCereal_W_XBd';
+    src: url('../fonts/AirbnbCerealWXBd.woff2') format('woff2'),
+        url('../fonts/AirbnbCerealWXBd.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+#up-nav-search {
+    transition: top 1s ease, width 0.3s ease, opacity 0.3s ease; /* Smooth transition for top, width, and opacity */
+    opacity: 1; /* Initially visible */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.nav-mid {
+    transition: opacity 1s ease; /* Smooth transition for navMid */
+}
+
+.hidden {
+    opacity: 0; /* Make it invisible */
+    pointer-events: none; /* Prevent interactions */
+}
+
+
+.nav-bar {
+    position: sticky; 
+    top: 90px; 
+    z-index: 1000; 
+    background-color: white; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
