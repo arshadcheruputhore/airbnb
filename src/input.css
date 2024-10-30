@@ -56,26 +56,12 @@
     font-display: swap;
 }
 
-#up-nav-search {
-    transition: top 1s ease, width 0.3s ease, opacity 0.3s ease; /* Smooth transition for top, width, and opacity */
-    opacity: 1; /* Initially visible */
-    z-index: 1000; /* Ensure it stays on top */
-}
-
-.nav-mid {
-    transition: opacity 1s ease; /* Smooth transition for navMid */
-}
-
-.hidden {
-    opacity: 0; /* Make it invisible */
-    pointer-events: none; /* Prevent interactions */
-}
-
 
 .nav-bar {
     position: sticky; 
-    top: 90px; 
+    top: 100px; 
     z-index: 1000; 
     background-color: white; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: all 1s ease;
 }

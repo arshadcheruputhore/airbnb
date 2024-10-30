@@ -37,58 +37,38 @@ searchWho.addEventListener('mouseleave', ()=> {
 
 
 
-// document.addEventListener("scroll", function () {
-//     const upNavSearch = document.getElementById("upNavSearch");
-//     const navMid = document.getElementById("navMid");
-//     const Upnav = document.getElementById('Up-nav');
-    
-//     // Get the scroll position from the top of the page
-//     const scrollPosition = window.scrollY;
-
-//     // When scrolling down more than 100 pixels
-//     if (scrollPosition > 2) {
-//         // Move upNavSearch to the position of navMid
-//         upNavSearch.style.position = "fixed"; // Make it fixed
-//         upNavSearch.style.top = "15px"; // Set to below the header (adjust as needed)
-//         upNavSearch.style.width = "90%"; // Make it full width
-//         navMid.style.display = "none";   // Hide navMid
-//         Upnav.style.zIndex = "100";
-//         upNavSearch.style.zIndex = "1000"
-//         upNavSearch.style.display = "200px";
-//         Upnav.style.paddingBottom = '15px';
-//         upNavSearch.style.transition = 
-//     } else {
-//         // Reset changes when scrolling back to the top
-//         upNavSearch.style.position = "relative"; // Reset to original position
-//         upNavSearch.style.top = "auto"; // Reset top
-//         upNavSearch.style.width = "100%"; // Reset to original width
-//         navMid.style.display = "flex"; // Show navMid
-//     }
-// });
-
-
 document.addEventListener("scroll", function () {
     const upNavSearch = document.getElementById("upNavSearch");
     const navMid = document.getElementById("navMid");
     const upNav = document.getElementById('Up-nav');
-    
-    // Get the scroll position from the top of the page
     const scrollPosition = window.scrollY;
 
-    // When scrolling down more than 2 pixels
     if (scrollPosition > 2) {
-        // Move upNavSearch to the position of navMid
+        // When scrolling down, move upNavSearch to navMid's position and hide navMid
         upNavSearch.style.position = "fixed"; // Make it fixed
-        upNavSearch.style.top = "15px"; // Set to below the header (adjust as needed)
-        upNavSearch.style.width = "45%";
-        navMid.classList.add("hidden");   // Hide navMid with transition effect
+        upNavSearch.style.zIndex = "999";
+        upNavSearch.style.transform = "translateY(-35px)"; // Move down, adjust as needed
+        upNavSearch.style.width = "45%"; // Adjust width for scroll state
+        upNavSearch.style.opacity = "1"; // Ensure it's visible
+        upNavSearch.style.transition = "transform 0.5s ease, opacity 0.3s ease, width 0.3s ease";
         upNav.style.zIndex = "100";
-        upNavSearch.style.zIndex = "1000"; // Ensure upNavSearch is on top
-        upNav.style.paddingBottom = '10px';
+        upNav.style.paddingBottom = '20px';
+        upNavSearch.style.marginRight = "150px";
+
+        navMid.style.opacity = "0"; // Fade out navMid
+        navMid.style.transform = "translateY(-100px)"; // Move up out of view
+        navMid.style.transition = "opacity 0.3s ease, transform 0.3s ease";
     } else {
-        // Reset changes when scrolling back to the top
-        upNavSearch.style.position = "relative"; // Reset to original position
-        upNavSearch.style.top = "auto"; // Reset top
-        navMid.classList.remove("hidden"); // Show navMid with transition effect
+        // Reset to original state when scrolling back to the top
+        upNavSearch.style.position = "relative";
+        upNavSearch.style.transform = "translateY(0)";
+        upNavSearch.style.width = "55%"; // Original width
+        upNavSearch.style.opacity = "1";
+        upNavSearch.style.marginRight = "0";
+
+        navMid.style.opacity = "1";
+        navMid.style.transform = "translateY(0)";
     }
 });
+
+

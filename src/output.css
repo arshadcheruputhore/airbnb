@@ -558,6 +558,10 @@ video {
   pointer-events: none;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .fixed {
   position: fixed;
 }
@@ -620,10 +624,6 @@ video {
 
 .grid {
   display: grid;
-}
-
-.hidden {
-  display: none;
 }
 
 .h-12 {
@@ -699,6 +699,10 @@ video {
 
 .max-w-full {
   max-width: 100%;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .grid-cols-3 {
@@ -1235,33 +1239,13 @@ video {
   font-display: swap;
 }
 
-#up-nav-search {
-  transition: top 1s ease, width 0.3s ease, opacity 0.3s ease;
-  /* Smooth transition for top, width, and opacity */
-  opacity: 1;
-  /* Initially visible */
-  z-index: 1000;
-  /* Ensure it stays on top */
-}
-
-.nav-mid {
-  transition: opacity 1s ease;
-  /* Smooth transition for navMid */
-}
-
-.hidden {
-  opacity: 0;
-  /* Make it invisible */
-  pointer-events: none;
-  /* Prevent interactions */
-}
-
 .nav-bar {
   position: sticky;
-  top: 90px;
+  top: 100px;
   z-index: 1000;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 1s ease;
 }
 
 .placeholder\:text-sm::-moz-placeholder {
