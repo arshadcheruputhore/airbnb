@@ -57,11 +57,6 @@
 }
 
 
-.nav-bar {
-    position: sticky; 
-    top: 100px; 
-    z-index: 1000; 
-    background-color: white; 
+/* .nav-bar {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    transition: all 1s ease;
-}
+} */
